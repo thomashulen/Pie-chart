@@ -34,17 +34,17 @@
     const centerY = canvas.height / 2;
     const radius = 80;
 
-    // Draw filled (black) slice
+    // Draw filled (black) slice for past + current day
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
     ctx.fillStyle = '#000';
     ctx.arc(centerX, centerY, radius, -Math.PI / 2, -Math.PI / 2 + 2 * Math.PI * percentFilled);
     ctx.fill();
 
-    // Draw unfilled (white) slice
+    // Draw light grey (#ccc) slice for future
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
-    ctx.fillStyle = '#fff';
+    ctx.fillStyle = '#ccc';
     ctx.arc(centerX, centerY, radius, -Math.PI / 2 + 2 * Math.PI * percentFilled, -Math.PI / 2 + 2 * Math.PI);
     ctx.fill();
   </script>
